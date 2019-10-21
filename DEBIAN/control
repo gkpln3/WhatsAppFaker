@@ -1,0 +1,9 @@
+Package: gkpln3.WhatsApp-Faker
+Name: WhatsappFaker
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Let's you edit existing WhatsApp chats.
+Maintainer: Guy Kaplan
+Author: Guy Kaplan
+Section: Utilities
+Depends: ${LIBSWIFT}

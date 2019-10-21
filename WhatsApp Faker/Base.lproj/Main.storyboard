@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aDP-vg-3Tk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mxB-MY-X9w">
+            <objects>
+                <navigationController id="aDP-vg-3Tk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jgt-sm-tx9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MGb-c7-TRU" kind="relationship" relationship="rootViewController" id="XPG-7x-XXS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBB-qd-pyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="-189"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9ds-vd-B6K">
+            <objects>
+                <viewController id="MGb-c7-TRU" customClass="ViewController" customModule="WhatsApp_Faker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VQx-Q9-7GJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-8g-Fl8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xtB-8g-Fl8" firstAttribute="top" secondItem="cV7-v6-M3J" secondAttribute="top" id="07g-52-S04"/>
+                            <constraint firstItem="cV7-v6-M3J" firstAttribute="trailing" secondItem="xtB-8g-Fl8" secondAttribute="trailing" id="6Z3-g6-QGT"/>
+                            <constraint firstItem="xtB-8g-Fl8" firstAttribute="leading" secondItem="cV7-v6-M3J" secondAttribute="leading" id="NbQ-hv-w0l"/>
+                            <constraint firstItem="cV7-v6-M3J" firstAttribute="bottom" secondItem="xtB-8g-Fl8" secondAttribute="bottom" id="Yf4-nd-kDu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cV7-v6-M3J"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WJW-8c-uK3"/>
+                    <connections>
+                        <outlet property="tableView" destination="xtB-8g-Fl8" id="6og-Yu-pNO"/>
+                        <segue destination="iDO-0b-PwT" kind="show" identifier="chatSegue" id="so7-Sb-lEh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2c-3e-b2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="-189"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="9cT-BS-b8B">
+            <objects>
+                <viewController id="iDO-0b-PwT" customClass="ChatViewController" customModule="WhatsApp_Faker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jFV-gP-quL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Uc-xu-JND">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Uc-xu-JND" firstAttribute="top" secondItem="Kc3-GR-5NP" secondAttribute="top" id="8iR-7k-XxR"/>
+                            <constraint firstItem="Kc3-GR-5NP" firstAttribute="bottom" secondItem="1Uc-xu-JND" secondAttribute="bottom" id="DxR-Aa-qY0"/>
+                            <constraint firstItem="Kc3-GR-5NP" firstAttribute="trailing" secondItem="1Uc-xu-JND" secondAttribute="trailing" id="eMX-3l-Atu"/>
+                            <constraint firstItem="1Uc-xu-JND" firstAttribute="leading" secondItem="Kc3-GR-5NP" secondAttribute="leading" id="mg1-pt-KYO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kc3-GR-5NP"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1Uc-xu-JND" id="5kB-Mg-hSe"/>
+                        <outlet property="view" destination="jFV-gP-quL" id="lMb-Ob-1iI"/>
+                        <segue destination="ole-eM-aBe" kind="show" identifier="messageSegue" id="wIc-Aa-bfc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTG-6L-86V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="-189"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="21D-Dd-Q0d">
+            <objects>
+                <viewController id="ole-eM-aBe" customClass="MessageViewController" customModule="WhatsApp_Faker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cnk-D7-fh1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptV-I5-Uf7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" text="Message text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gfh-oN-Nf3">
+                                        <rect key="frame" x="0.0" y="8" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="DOq-ZA-Xgw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R7W-an-tW0">
+                                        <rect key="frame" x="93" y="144" width="189" height="29"/>
+                                        <segments>
+                                            <segment title="From me"/>
+                                            <segment title="From partner"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="76a-1Z-Um4">
+                                        <rect key="frame" x="57.5" y="189" width="260" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="Hi8-0S-Ijt"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Sent"/>
+                                            <segment title="Delivered"/>
+                                            <segment title="Read"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSh-35-Cxb">
+                                        <rect key="frame" x="8" y="235" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="dateFieldEditing:" destination="ole-eM-aBe" eventType="editingDidBegin" id="6Nm-B6-cGs"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-Et-SK4">
+                                        <rect key="frame" x="164.5" y="273" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didClickDone:" destination="ole-eM-aBe" eventType="touchUpInside" id="pXE-nC-VOX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gfh-oN-Nf3" firstAttribute="top" secondItem="ptV-I5-Uf7" secondAttribute="topMargin" id="1UV-zQ-l4j"/>
+                                    <constraint firstItem="R7W-an-tW0" firstAttribute="top" secondItem="gfh-oN-Nf3" secondAttribute="bottom" constant="8" id="AgM-zx-w8F"/>
+                                    <constraint firstAttribute="bottom" secondItem="BQf-Et-SK4" secondAttribute="bottom" id="Fxp-KV-mfz"/>
+                                    <constraint firstAttribute="trailing" secondItem="SSh-35-Cxb" secondAttribute="trailing" constant="8" id="MLz-ON-GgK"/>
+                                    <constraint firstItem="SSh-35-Cxb" firstAttribute="top" secondItem="76a-1Z-Um4" secondAttribute="bottom" constant="18" id="Q1s-Zc-z27"/>
+                                    <constraint firstItem="gfh-oN-Nf3" firstAttribute="centerX" secondItem="ptV-I5-Uf7" secondAttribute="centerX" id="Twg-SQ-yja"/>
+                                    <constraint firstItem="76a-1Z-Um4" firstAttribute="centerX" secondItem="ptV-I5-Uf7" secondAttribute="centerX" id="Zvi-OJ-ZHT"/>
+                                    <constraint firstItem="BQf-Et-SK4" firstAttribute="top" secondItem="SSh-35-Cxb" secondAttribute="bottom" constant="8" id="Zwa-cc-bv0"/>
+                                    <constraint firstItem="76a-1Z-Um4" firstAttribute="top" secondItem="R7W-an-tW0" secondAttribute="bottom" constant="17" id="jom-TS-MYR"/>
+                                    <constraint firstAttribute="trailing" secondItem="gfh-oN-Nf3" secondAttribute="trailing" id="lf8-Xj-5KY"/>
+                                    <constraint firstItem="SSh-35-Cxb" firstAttribute="leading" secondItem="ptV-I5-Uf7" secondAttribute="leading" constant="8" id="lpn-El-OYU"/>
+                                    <constraint firstItem="gfh-oN-Nf3" firstAttribute="leading" secondItem="ptV-I5-Uf7" secondAttribute="leading" id="oHq-UI-It6"/>
+                                    <constraint firstItem="BQf-Et-SK4" firstAttribute="centerX" secondItem="ptV-I5-Uf7" secondAttribute="centerX" id="yGk-wB-sqC"/>
+                                    <constraint firstItem="R7W-an-tW0" firstAttribute="centerX" secondItem="ptV-I5-Uf7" secondAttribute="centerX" id="zwZ-W7-KKb"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ptV-I5-Uf7" firstAttribute="top" secondItem="HpA-HC-wrL" secondAttribute="top" id="nd2-e1-ow5"/>
+                            <constraint firstItem="ptV-I5-Uf7" firstAttribute="leading" secondItem="HpA-HC-wrL" secondAttribute="leading" id="pvt-nY-GUI"/>
+                            <constraint firstItem="HpA-HC-wrL" firstAttribute="bottom" secondItem="ptV-I5-Uf7" secondAttribute="bottom" id="tKE-yI-Y2c"/>
+                            <constraint firstItem="HpA-HC-wrL" firstAttribute="trailing" secondItem="ptV-I5-Uf7" secondAttribute="trailing" id="wtE-g2-hvh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HpA-HC-wrL"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateTextView" destination="SSh-35-Cxb" id="cUo-2m-XHZ"/>
+                        <outlet property="messageTextView" destination="gfh-oN-Nf3" id="bVe-HZ-NMM"/>
+                        <outlet property="sideSelectionView" destination="R7W-an-tW0" id="aKn-kG-uRc"/>
+                        <outlet property="statusSelectionView" destination="76a-1Z-Um4" id="EOO-5U-ibG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhf-Cb-8WV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456.8000000000002" y="-189.3553223388306"/>
+        </scene>
+    </scenes>
+</document>
